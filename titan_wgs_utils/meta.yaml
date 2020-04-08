@@ -3,7 +3,6 @@ package:
   version: 1.10.0
 source:
   - git_url: https://github.com/shahcompbio/titan_wgs_utils.git
-    git_rev: v0.0.1
     folder: titan_wgs_utils
 build:
   number: 2
