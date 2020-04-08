@@ -1,0 +1,19 @@
+package:
+  name: circos_utils
+  version: 1.10.0
+source:
+  - git_url: https://github.com/shahcompbio/circos_utils.git
+    folder: circos_utils
+build:
+  number: 2
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+  run:
+test:
+  commands:
+    - '[[ -f circos.R ]] && echo "This file exists"'
+about:
+  summary: 'Utility scripts for circos plotting.'
