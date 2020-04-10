@@ -1,0 +1,29 @@
+package:
+  name: circos
+  version: 1.10.0
+source:
+#  - git_url: https://github.com/shahcompbio/circos_utils.git
+#    folder: circos
+build:
+  number: 2
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+    - 'bioconductor-ComplexHeatmap'
+    - 'r-circlize'
+    - 'r-argparse'
+    - r >=3.1.0
+  run:
+    - 'bioconductor-ComplexHeatmap'
+    - 'r-circlize'
+    - 'r-argparse'
+    - r >=3.1.0
+test:
+  commands:
+    - '$R -e "library(''circlize'')"'
+    - '$R -e "library(''ComplexHeatmap'')"'
+
+about:
+  summary: 'circos plotting'
