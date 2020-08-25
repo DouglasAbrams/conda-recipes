@@ -1,0 +1,31 @@
+package:
+  name: circos_utils
+  version: '0.0.1'
+build:
+  number: 2
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+    # - 'r >=3.1.0'
+    - 'r-circlize'
+    # - 'r-complexheatmap'
+    # - 'r-rcolorbrewer'
+
+  run:
+    # - 'r >=3.1.0'
+    - 'r-circlize'
+    # - 'r-complexheatmap'
+    # - 'r-rcolorbrewer'
+
+test:
+  commands:
+    - 'R -e "library(circlize)"'
+    - 'R -e "library(ComplexHeatmap)"'
+    - 'R -e "library(RColorBrewer)"'
+
+about:
+  home: http://shahlab.ca
+  summary: ''
+
