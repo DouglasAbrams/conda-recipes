@@ -1,0 +1,20 @@
+package:
+  name: vcf2maf_shahcompbio
+  version: '0.0.1'
+
+requirements:
+  build:
+    - vcf2maf
+    - ensembl-vep=99.2
+  run:
+    - vcf2maf
+    - ensembl-vep=99.2
+
+test:
+  commands:
+    - vcf2maf.pl --help
+
+about:
+  home: sddsfd.com
+  license: GPLv3
+  summary: vcf2maf conversion

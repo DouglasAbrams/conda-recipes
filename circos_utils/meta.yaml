@@ -1,9 +1,6 @@
 package:
   name: circos_utils
-  version: 1.10.0
-source:
-  - git_url: https://github.com/shahcompbio/circos_utils.git
-    folder: circos_utils
+  version: '0.0.1'
 build:
   number: 2
   rpaths:
@@ -11,9 +8,23 @@ build:
     - lib/
 requirements:
   build:
+    - 'r >=3.1.0'
+    - 'r-circlize'
+    - 'bioconductor-complexheatmap'
+    -  'r-rcolorbrewer'
+    - readline
   run:
+    - 'r >=3.1.0'
+    - 'r-circlize'
+    - 'bioconductor-complexheatmap'
+    - 'r-rcolorbrewer'
+    - readline
 test:
   commands:
-    - '[[ -f circos.R ]] && echo "This file exists"'
+    - 'R -e "library(circlize)"'
+    - 'R -e "library(ComplexHeatmap)"'
+    - 'R -e "library(RColorBrewer)"'
+
 about:
-  summary: 'Utility scripts for circos plotting.'
+  home: http://shahlab.ca
+  summary: ''

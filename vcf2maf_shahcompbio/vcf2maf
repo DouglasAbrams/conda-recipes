@@ -1,0 +1,10 @@
+#!/bin/bash
+
+INPUTVCF=$1
+OUTPUTMAF=$2
+FASTA=$3
+FILTERVCF=$4
+VEPDATA=$5
+
+
+vcf2maf.pl --input-vcf $1 --output-maf $2 --ref-fasta $3 --filter-vcf $4 --vep-data $5  --vep-path $(dirname `which vep`)

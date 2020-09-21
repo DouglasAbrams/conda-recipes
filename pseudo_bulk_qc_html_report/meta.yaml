@@ -1,0 +1,34 @@
+package:
+  name: pseudo_bulk_qc_html_report
+  version: '0.0.1'
+build:
+  number: 2
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+    - 'r >=3.1.0'
+    - 'r-tidyverse'
+    - 'r-data.table'
+    - 'r-rmarkdown'
+    - 'pandoc'
+    - 'r-dt'
+  run:
+    - 'r >=3.1.0'
+    - 'r-tidyverse'
+    - 'r-data.table'
+    - 'r-rmarkdown'
+    - 'pandoc'
+    - 'r-dt'
+test:
+  commands:
+    - 'R -e "library(tidyverse)"'
+    - 'R -e "library(data.table)"'
+    - 'R -e "library(rmarkdown)"'
+
+
+about:
+  home: http://shahlab.ca
+  summary: ''
+
