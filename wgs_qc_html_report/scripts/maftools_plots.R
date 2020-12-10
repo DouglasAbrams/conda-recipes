@@ -30,7 +30,7 @@ main = function(){
     maf_file = args[1]
     vcNames=args[2]
     cn=args[3]
-    
+    oncoplot_path = args[4]
     somatic_interactions = args[5]
 
     mafsummary = args[6]
@@ -40,12 +40,13 @@ main = function(){
     maf = maftools::read.maf(maf=maf_file, cnTable=cn, vc_nonSyn=vcNames)
     
     oncoplot(maf, oncoplot_path, genes)
-    maf_summary(,af, mafsummary)
+    maf_summary(maf, mafsummary)
 
     somatic_interaction_plot(maf, somatic_interactions)
 
 
 }
+
 
 main()
 
