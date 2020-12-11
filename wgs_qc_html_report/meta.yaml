@@ -15,11 +15,15 @@ requirements:
     - r
     - r-data.table
     - r-rcolorbrewer
+    - 'pandoc'
+
   run:
     - r >=3.3.0
     - r-rmarkdown
     - r-data.table
     - r-rcolorbrewer
+    - 'pandoc'
+
 test:
   commands:
     - 'R -e "library(rmarkdown)"'
